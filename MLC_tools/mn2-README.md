@@ -7,11 +7,11 @@ Micronetworks v2 generates loop-capable networks with tunable geometry, width di
 - `mn2_store_network.m` — flatten results into nodes/segments/paths with stats and query helpers.
 - `mn2_check_crossover.m` — segment intersection checks.
 
-## Quick start
+## Quick start (THIS IS HOW TO RUN IN MATLAB!!!)
 ```matlab
 init = mn2_init_points();         % build domain
 res  = mn2_generate_paths(init);  % grow paths (plots by default)
-net  = mn2_store_network(res);    % flatten for downstream use
+net  = mn2_store_network(res);    % flatten for downstream use (for Genetic Algorithm basically)
 ```
 Inspect a path’s segments:
 ```matlab
@@ -54,4 +54,3 @@ seg_w   = [net.Segments(seg_ids).width];
 ## Plotting
 - Enabled by default (`doPlot=true` in `mn2_generate_paths`).
 - Disable plotting: `mn2_generate_paths(init, [], [], [], [], false);`
-
